@@ -53,4 +53,4 @@ comments_replied_to = get_saved_comments()
 print(comments_replied_to)
 
 while True:
-	run_bot(r, comments_replied_to)
+	run_bot(r, comments_replied_to))
