@@ -3,6 +3,7 @@ import config
 import time
 import os
 
+#Doing the bot loggin
 def bot_login():
 	print("Logging in...")
 	r = praw.Reddit(username = config.username,
@@ -14,7 +15,7 @@ def bot_login():
     print("Logged in!")
 
 	return r
-
+#Starting the bot and replyng to comments
 def run_bot(r, comments_replied_to):
 	print("Searching last 1,000 comments")
 
@@ -36,7 +37,7 @@ def run_bot(r, comments_replied_to):
 	print ("Sleeping for 10 seconds...")
 	#Sleep for 10 seconds...		
 	time.sleep(10)
-
+#Saving the comments
 def get_saved_comments():
 	if not os.path.isfile("comments_replied_to.txt"):
 		comments_replied_to = []
